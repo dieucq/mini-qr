@@ -57,7 +57,8 @@ const formatICalDateTime = (dateTime: string | Date): string => {
  * @returns {string} - Formatted text string
  */
 export const generateTextData = (data: { text: string }): string => {
-  return data.text || ''
+  return data.text ? '\ufeff' + data.text : ''
+  // return data.text || ''
 }
 
 /**
